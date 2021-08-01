@@ -1,9 +1,7 @@
-from __future__ import print_function
 import discord 
-import os
+from discord.ext import commands
+import keys
 
-
-import ipywidgets as widgets
 from transformers import pipeline
 
 nlp_qa = pipeline('question-answering')
@@ -30,4 +28,6 @@ async def on_ready():
 
 
 
-client.run(os.getenv('TOKEN'))
+client.run(keys.TOKEN)
+
+

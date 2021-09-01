@@ -3,7 +3,7 @@ from discord.ext import commands
 import keys
 from transformers import pipeline
 
-
+#
 
 
 nlp_qa = pipeline('question-answering')

@@ -17,6 +17,8 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+    if message.content.startswith('#bot') :
+        await message.channel.send("beep boop beep")
     if message.content.startswith('#context') :
         await message.channel.send("context received MOFO")
         context_temp = pickle.load(open('data/context.p','rb'))

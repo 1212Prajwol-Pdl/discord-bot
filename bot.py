@@ -17,8 +17,10 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+    if message.content.startswith('#commands'):
+        await message.channel.send("#bot= To see if I am alive \n #context= To give me data to work on \n #question= To ask me question that shall blow your puny mind")
     if message.content.startswith('#bot') :
-        await message.channel.send("beep boop beep")
+        await message.channel.send("beep boop beep_robot \n type #commands for more info")
     if message.content.startswith('#context') :
         await message.channel.send("context received MOFO")
         context_temp = pickle.load(open('data/context.p','rb'))
